@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQC Generator - iPhone Quoted Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div id="background"></div>
+
+    <div id="content" class="hidden">
+        <div class="container">
+            <header class="glass-card">
+                <div class="header-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h1>IQC Generator</h1>
+                <p>Buat iPhone Quoted Screenshot yang Keren!</p>
+            </header>
+
+            <div class="main-content glass-card">
+                <div class="form-section">
+                    <h2><i class="fas fa-magic"></i> Buat IQC Kamu</h2>
+                    
+                    <div class="form-group">
+                        <label><i class="far fa-clock"></i> Waktu</label>
+                        <input type="time" id="time" value="11:26">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="far fa-comment-dots"></i> Pesan</label>
+                        <textarea id="messageText" placeholder="Tulis pesan kamu disini..." rows="4">minimal gak ngemis</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-signal"></i> Nama Provider</label>
+                        <input type="text" id="carrierName" value="INDOSAT OOREDOO" placeholder="Contoh: INDOSAT OOREDOO">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-battery-three-quarters"></i> Baterai (%)</label>
+                        <input type="number" id="batteryPercentage" min="0" max="100" value="8">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-wifi"></i> Sinyal (1-4)</label>
+                        <input type="number" id="signalStrength" min="1" max="4" value="4">
+                    </div>
+
+                    <div class="template-section">
+                        <h3><i class="fas fa-file-alt"></i> Template Kata-kata</h3>
+                        <div class="template-buttons">
+                            <button class="template-btn" data-text="minimal gak ngemis">minimal gak ngemis</button>
+                            <button class="template-btn" data-text="jangan lupa bahagia">jangan lupa bahagia</button>
+                            <button class="template-btn" data-text="capek tapi gapapa">capek tapi gapapa</button>
+                            <button class="template-btn" data-text="hidup bukan untuk diratapi">hidup bukan untuk diratapi</button>
+                            <button class="template-btn" data-text="santai aja dulu">santai aja dulu</button>
+                            <button class="template-btn" data-text="gak usah dipikirin">gak usah dipikirin</button>
+                        </div>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fas fa-magic"></i> Generate Preview
+                    </button>
+                    
+                    <div id="actionButtons" class="action-buttons hidden">
+                        <button id="downloadBtn" class="download-btn">
+                            <i class="fas fa-download"></i> Download Image
+                        </button>
+                        <button id="resetBtn" class="reset-btn">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <div class="preview-section">
+                    <h2><i class="far fa-eye"></i> Preview</h2>
+                    <div class="preview-container">
+                        <img id="preview" src="" alt="Preview akan muncul disini">
+                        <p class="preview-placeholder">Preview akan muncul setelah generate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-section glass-card">
+                <h2><i class="fas fa-book-open"></i> Cara Pakai</h2>
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Isi Form</h3>
+                            <p>Masukkan waktu, pesan, nama provider, persentase baterai, dan kekuatan sinyal</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Pilih Template (Opsional)</h3>
+                            <p>Klik salah satu template kata-kata yang tersedia untuk auto-fill pesan</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Generate & Download</h3>
+                            <p>Klik tombol "Generate & Download" dan gambar akan otomatis terdownload</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Selesai!</h3>
+                            <p>IQC kamu siap digunakan dan dibagikan ke media sosial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="script.js"></script>
+</body>
+</html>
